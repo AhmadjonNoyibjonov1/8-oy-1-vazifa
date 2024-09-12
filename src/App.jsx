@@ -1,11 +1,12 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
-import CardList from './components/Cards';
-import ProductDetails from './components/ProductsDetails';
+import React from "react";
+import { useSelector } from "react-redux";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import CardList from "./components/Cards";
+import ProductDetails from "./components/ProductsDetails";
+import SavedProducts from "./components/SavedProducts";
 
 const texts = {
   en: {
@@ -42,7 +43,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Hero texts={texts[language]} />} />
           <Route path="/products" element={<CardList />} />
-          <Route path="/products/:model" element={<ProductDetails />} />
+          <Route path="/products/save" element={<SavedProducts></SavedProducts>} />
         </Routes>
 
         <Footer texts={texts[language]} />

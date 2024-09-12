@@ -7,9 +7,6 @@ function ProductDetails() {
   const navigate = useNavigate();
   const isDarkMode = useSelector((state) => state.theme.darkMode);
 
-//   const data = [
-    
-//   ];
 
   const product = data.find((item) => item.model === model);
 

@@ -1,10 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
-import languageReducer from '../redux/languageSlice';
-import themeReducer from '../redux/themeSlice';
+import cartReducer from './cart';
+import savedProductsReducer from './save';
+import themeReducer from './themeSlice';
+import languageReducer from './languageSlice'; 
 
 export const store = configureStore({
   reducer: {
-    language: languageReducer,
+    cart: cartReducer,
+    savedProducts: savedProductsReducer,
     theme: themeReducer,
+    language: languageReducer,
   },
 });
